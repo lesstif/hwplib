@@ -13,6 +13,17 @@
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.hamcrest</groupId>
+          <artifactId>hamcrest-core</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>1.3</version>
     </dependency>
     <dependency>
         <groupId>org.apache.poi</groupId>
@@ -27,9 +38,8 @@
 
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <!--
-         <testSourceDirectory>src/kr/dogfoot/hwplib/test</testSourceDirectory>
-    -->
+    <testSourceDirectory>test</testSourceDirectory>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
